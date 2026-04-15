@@ -27,25 +27,31 @@
 .findings-hero {
   background: #F3EDE6;
   color: #212833;
-  padding: 16px 0;
+  padding: 8px 0 8px;
+  border-bottom: 1px solid #CDC6C0;
 }
 @media (min-width: 1024px) {
-  .findings-hero { padding: 24px 0; }
+  .findings-hero { padding: 24px 0 24px; }
+}
+.findings-hero .eyebrow {
+  display: inline-flex;
+  margin-bottom: 16px;
+  color: #909396;
+}
+@media (min-width: 1024px) {
+  .findings-hero .eyebrow { margin-bottom: 24px; }
 }
 .findings-hero h1 {
-  font-family: 'Suisse Works', Georgia, serif;
-  font-size: 32px;
-  line-height: 1.15;
-  letter-spacing: -0.03em;
-  margin-bottom: 8px;
-}
-@media (min-width: 1024px) {
-  .findings-hero h1 { font-size: 48px; line-height: 52px; }
+  max-width: 30ch;
+  margin-bottom: 16px;
 }
 .findings-hero .subtitle {
-  font-size: 18px;
-  line-height: 24px;
+  max-width: 1280px;
   color: #909396;
+}
+.findings-hero .subtitle strong {
+  color: #212833;
+  font-weight: 450;
 }
 
 /* Layout container matching index.html snz0vex */
@@ -62,13 +68,17 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
-  padding: 40px 0;
+  padding: 32px 0 48px;
 }
 @media (min-width: 768px) {
   .stats-row { grid-template-columns: repeat(3, 1fr); gap: 24px; }
 }
+@media (min-width: 1024px) {
+  .stats-row { padding: 24px 0 24px; }
+}
 .stat-card {
-  background: #F3EDE6;
+  background: rgba(243, 237, 230, 0.6);
+  border: 1px solid #CDC6C0;
   border-radius: 16px;
   padding: 24px;
 }
@@ -77,83 +87,96 @@
   line-height: 1;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #909396;
+  color: #000000;
   margin-bottom: 12px;
+  font-weight: 700;
 }
 @media (min-width: 1024px) { .stat-card .stat-label { font-size: 14px; line-height: 16px; } }
 .stat-card .stat-value {
   font-family: 'Suisse Works', Georgia, serif;
   font-size: 32px;
-  line-height: 1.2;
+  line-height: 1.05;
   letter-spacing: -0.03em;
 }
 @media (min-width: 1024px) { .stat-card .stat-value { font-size: 40px; } }
 .stat-card .stat-value.stat-value--sm {
+  font-family: "Suisse Int'l", "Helvetica Neue", Arial, sans-serif;
   font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
 }
 @media (min-width: 1024px) { .stat-card .stat-value.stat-value--sm { font-size: 24px; line-height: 28px; } }
 
 .stat-breakdown {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  margin-top: 4px;
+  gap: 10px;
+  margin-top: 2px;
 }
 .stat-breakdown-row {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
 }
 .stat-breakdown-row .severity-badge {
-  min-width: 64px;
+  min-width: 78px;
   justify-content: center;
 }
 .stat-breakdown-count {
   font-weight: 450;
   font-size: 16px;
+  color: #212833;
 }
 
 /* Findings section */
 .findings-section {
-  padding: 56px 0;
+  padding: 0 0 56px;
 }
-@media (min-width: 1024px) { .findings-section { padding: 80px 0; } }
+@media (min-width: 1024px) { .findings-section { padding: 0 0 80px; } }
 
 .findings-section-title {
-  font-family: 'Suisse Works', Georgia, serif;
-  font-size: 24px;
-  line-height: 28px;
-  letter-spacing: -0.03em;
   margin-bottom: 32px;
 }
 @media (min-width: 1024px) {
-  .findings-section-title { font-size: 32px; line-height: 36px; }
+  .findings-section-title { margin-bottom: 40px; }
 }
 
 .findings-list { display: grid; gap: 16px; }
+@media (min-width: 1024px) {
+  .findings-list { gap: 20px; }
+}
 
 .finding-card {
-  border: 1px solid #CDC6C0;
+  background: #F3EDE6;
+  border: 1px solid rgba(205, 198, 192, 0.8);
   border-radius: 16px;
   padding: 24px;
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 .finding-card:hover {
   box-shadow: 0 8px 32px rgba(44, 53, 68, 0.08);
+  transform: translateY(-2px);
 }
 
 .finding-header {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  margin-bottom: 12px;
+  display: grid;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+@media (min-width: 768px) {
+  .finding-header {
+    grid-template-columns: auto 1fr;
+    align-items: start;
+    column-gap: 14px;
+  }
 }
 
 .severity-badge {
   display: inline-flex;
   align-items: center;
   flex-shrink: 0;
-  padding: 4px 10px;
+  width: fit-content;
+  padding: 6px 10px;
   border-radius: 100px;
   font-size: 11px;
   font-weight: 450;
@@ -167,27 +190,33 @@
 .severity-info     { background: #E8F4FD; color: #2471A3; }
 
 .finding-title {
-  font-weight: 450;
+  font-family: "Suisse Int'l", "Helvetica Neue", "Arial", sans-serif;
+  color: #212833;
+  font-weight: 700;
   font-size: 16px;
   line-height: 20px;
 }
 @media (min-width: 1024px) { .finding-title { font-size: 18px; line-height: 24px; } }
 
 .finding-description {
-  color: #555;
+  font-family: "Suisse Int'l", "Helvetica Neue", "Arial", sans-serif;
+  color: #212833;
   font-size: 16px;
   line-height: 20px;
-  margin-bottom: 8px;
+  margin-bottom: 0;
 }
 
 .finding-action {
+  font-family: "Suisse Int'l", "Helvetica Neue", "Arial", sans-serif;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(144, 147, 150, 0.35);
   font-size: 14px;
-  color: #909396;
-  font-style: italic;
+  color: #000000;
+  line-height: 20px;
 }
 .finding-action strong {
-  color: #212833;
-  font-style: normal;
+  color: #0061FE;
   font-weight: 450;
 }
 
@@ -196,24 +225,6 @@
   text-align: center;
   margin-top: 32px;
 }
-.show-all-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 48px;
-  padding: 14px 32px;
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 450;
-  color: #0061FE;
-  background: none;
-  border: 2px solid #0061FE;
-  border-radius: 100px;
-  cursor: pointer;
-  transition: background 0.15s, color 0.15s;
-}
-@media (min-width: 1024px) { .show-all-btn { min-height: 56px; padding: 16px 40px; font-size: 18px; } }
-.show-all-btn:hover { background: #0061FE; color: #FFFDFA; }
 
 /* Divider */
 .findings-divider {
@@ -234,87 +245,64 @@
 @media (min-width: 768px) { .two-col { grid-template-columns: 1fr 1fr; gap: 32px; } }
 
 .info-card {
-  background: #F3EDE6;
+  background: rgba(243, 237, 230, 0.75);
+  border: 1px solid #CDC6C0;
   border-radius: 16px;
-  padding: 32px;
+  padding: 16px;
 }
 .info-card h3 {
-  font-family: 'Suisse Works', Georgia, serif;
-  font-size: 20px;
-  letter-spacing: -0.02em;
   margin-bottom: 20px;
 }
-@media (min-width: 1024px) { .info-card h3 { font-size: 24px; line-height: 28px; } }
 .info-card ul {
   list-style: none;
   display: grid;
-  gap: 12px;
+  gap: 14px;
 }
 .info-card li {
   position: relative;
-  padding-left: 20px;
+  padding-left: 24px;
   font-size: 16px;
   line-height: 20px;
-  color: #444;
+  color: #212833;
 }
 .info-card li::before {
   content: '';
   position: absolute;
-  left: 0; top: 7px;
+  left: 0; top: 8px;
   width: 6px; height: 6px;
   border-radius: 50%;
-  background: #909396;
+  background: #0061FE;
 }
 
 /* CTA section */
-.cta-section {
-  background: #212833;
-  color: #FFFDFA;
-  padding: 64px 0;
-  text-align: center;
+.findings-cta-section {
+  background: #F3EDE6;
+  padding: 80px 0 96px;
 }
-.cta-section h2 {
-  font-family: 'Suisse Works', Georgia, serif;
-  font-size: 24px;
-  line-height: 28px;
-  letter-spacing: -0.03em;
-  margin-bottom: 32px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+@media (min-width: 1024px) {
+  .findings-cta-section { padding: 32px 0 48px; }
 }
-@media (min-width: 1024px) { .cta-section h2 { font-size: 32px; line-height: 36px; } }
-
-.cta-buttons {
+.findings-cta-inner {
+  max-width: 720px;
+}
+.findings-cta-eyebrow {
+  color: rgba(0, 0, 0, 0.6);
+  display: block;
+  margin-bottom: 16px;
+}
+.findings-cta-heading {
+  color: #000000;
+  margin-bottom: 16px;
+}
+.findings-cta-copy {
+  color: rgba(0, 0, 0, 0.72);
+  max-width: 520px;
+  margin-bottom: 40px;
+}
+.findings-cta-buttons {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 12px;
-}
-
-.cta-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 48px;
-  padding: 14px 24px;
-  font-family: inherit;
-  font-size: 16px;
-  font-weight: 450;
-  border-radius: 100vmax;
-  text-decoration: none;
-  cursor: pointer;
-  transition: opacity 0.125s;
-  border: 0;
-}
-@media (min-width: 1024px) { .cta-btn { min-height: 56px; padding: 18px 32px; font-size: 18px; } }
-.cta-btn:hover { opacity: 0.7; }
-
-.cta-btn--primary { background: #0061FE; color: #FFFDFA; }
-.cta-btn--outline {
-  background: none;
-  color: #FFFDFA;
-  box-shadow: inset 0 0 0 2px #FFFDFA;
 }
 
 .findings-loading {
@@ -333,16 +321,10 @@
 <span class="bx0tjgg">Navigating the UAE market? Let our local team help you scale</span><div class="b1f1fiys"><a href="https://osome.com/ae/" target="_blank" class="c1atdfcq b1j13c6c b1nikwfy v19sr4o1 s1wij8ug s5eck5j" style="--_text-color:#212833;--_accent-color:#FFFDFA">Visit website<svg class="s1oe8ixe" width="16px" height="16px"><use xlink:href="https://osome.com/_next/static/media/sprites.57a3582aad3f27c9c59d076fbd1e820d.svg#arrow.16.icon_FgC3B"></use></svg></a><div class="b480rvw" style="--b480rvw-0:block;--b480rvw-1:none"><picture class="iniktcu ittjoak" itemscope="" itemType="http://schema.org/ImageObject"><img src="https://osome.com/assets/img/icon/uae-flag.svg" width="40" height="40" alt="UAE Flag" decoding="async" loading="lazy" itemProp="contentUrl"/></picture></div>
 </div>
 </div>
-<header style="--s9kno3k-0:#212833;--s9kno3k-1:136px;--s9kno3k-2:var(--banner-bottom, 136px);--s9kno3k-3:0;--s9kno3k-4:transparent;--s9kno3k-5:none;--s9kno3k-6:80px;--s9kno3k-7:var(--banner-bottom, 80px)" class="s9kno3k"><div style="opacity: 0" class="s198y3m8"><div class="s12b88n7" style="--s12b88n7-0:40px;--s12b88n7-1:0"><a href="https://my.osome.com/get-started?q=sg-general&amp;branch=sg" target="_blank" class="c1atdfcq b1j13c6c b1nikwfy v7rvdue so9nljo m1t2e70k s5eck5j" style="--_text-color:#FFFDFA;--_accent-color:#0061FE">Get started</a></div>
-<div class="s13o57tv" style="--s13o57tv-0:unset"><a href="https://osome.com/sg/" class="l17134ki"><picture class="iniktcu r1sjfyqb" itemscope="" itemType="http://schema.org/ImageObject"><img src="https://osome.com/assets/img/logo/osome-logo-face.svg" width="20" height="20" alt="Logo" decoding="async" loading="eager" itemProp="contentUrl"/></picture><picture class="iniktcu r1sjfyqb" itemscope="" itemType="http://schema.org/ImageObject"><img src="https://osome.com/assets/img/logo/osome-logo-text.svg" width="94" height="19" alt="Osome" decoding="async" loading="eager" itemProp="contentUrl"/></picture></a></div>
-<button class="m1tdxix4" type="button" aria-label="Open/close menu"><svg class="s1oe8ixe" width="24px" height="24px"><use xlink:href="https://osome.com/_next/static/media/sprites.57a3582aad3f27c9c59d076fbd1e820d.svg#mobile-menu.24.icon_26APG"></use></svg></button>
-</div>
-</header>
-
 <!-- FINDINGS PAGE CONTENT -->
 <div class="findings-hero">
   <div class="findings-container">
-    <h1>Your free AI Accounts Review</h1>
+    <h1 class="s1dmgi0d ci7yvy4">Your free AI Accounts Review</h1>
     <p class="subtitle" id="company-line">Review completed for: <strong>ACME Pte Ltd</strong></p>
   </div>
 </div>
@@ -357,19 +339,15 @@
       <div class="stat-label">Breakdown</div>
       <div class="stat-breakdown" id="stat-breakdown"></div>
     </div>
-    <div class="stat-card">
-      <div class="stat-label">Estimated review coverage</div>
-      <div class="stat-value stat-value--sm" id="stat-coverage">Better than a manual first pass</div>
-    </div>
   </div>
 </div>
 
 <div class="findings-container">
   <div class="findings-section" id="findings-section">
-    <h2 class="findings-section-title">What we found</h2>
+    <h2 class="findings-section-title s1dmgi0d ci7yvy4">What we found</h2>
     <div class="findings-list" id="findings-list"></div>
     <div class="show-all-wrap" id="show-all-wrap" style="display:none">
-      <button class="show-all-btn" id="show-all-btn">Show all findings</button>
+      <button class="c1atdfcq b1j13c6c b1nikwfy v19sr4o1 so9nljo s5eck5j" id="show-all-btn" style="--_text-color:#0061FE;--_accent-color:#0061FE" type="button">Show all findings</button>
     </div>
   </div>
 </div>
@@ -380,7 +358,7 @@
   <div class="two-col-section">
     <div class="two-col">
       <div class="info-card">
-        <h3>What this could mean</h3>
+        <h3 class="s1dmgi0d ci7yvy4">What this could mean</h3>
         <ul>
           <li>Your books may contain missed issues</li>
           <li>Your reviewer may not be checking consistently</li>
@@ -388,7 +366,7 @@
         </ul>
       </div>
       <div class="info-card">
-        <h3>How Osome can help</h3>
+        <h3 class="s1dmgi0d ci7yvy4">How Osome can help</h3>
         <ul>
           <li>Review and validate the findings</li>
           <li>Correct the accounting treatment</li>
@@ -400,16 +378,19 @@
   </div>
 </div>
 
-<div class="cta-section">
+<section class="findings-cta-section">
   <div class="findings-container">
-    <h2>Want us to walk you through the findings and tell you how we would fix them?</h2>
-    <div class="cta-buttons">
-      <a href="#" class="cta-btn cta-btn--primary">Book a call with Osome</a>
-      <a href="#" class="cta-btn cta-btn--outline">Talk to an expert</a>
-      <a href="#" class="cta-btn cta-btn--outline">Email me this summary</a>
+    <div class="findings-cta-inner">
+      <span class="cm8v4w4 findings-cta-eyebrow">Next step</span>
+      <h2 class="s1dmgi0d ci7yvy4 findings-cta-heading">Want us to walk you through the findings and tell you how we would fix them?</h2>
+      <p class="b18peh69 findings-cta-copy">We can validate the issues, explain what needs attention first, and show you the cleanup path that makes sense for your books.</p>
+      <div class="findings-cta-buttons">
+        <a href="#" class="c1atdfcq b1j13c6c b1nikwfy v7rvdue so9nljo s5eck5j" style="--_text-color:#FFFDFA;--_accent-color:#0061FE">Book a call to Osome</a>
+        <a href="#" class="c1atdfcq b1j13c6c b1nikwfy v19sr4o1 so9nljo s5eck5j" style="--_text-color:#0061FE;--_accent-color:#0061FE">Email me this summary</a>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
 <footer id="page-footer" class="sehk8on"><div class="f1tin3c0 snz0vex"><div class="fwvomix"><div class="f15hp9vk"><details class="sgnb6x3"><summary class="c1atdfcq cm8v4w4 sk0l2f5">Incorporation<span class="idt8w5m"><svg class="s1oe8ixe" width="16px" height="16px"><use xlink:href="https://osome.com/_next/static/media/sprites.57a3582aad3f27c9c59d076fbd1e820d.svg#plus.16.icon_2a78F"></use></svg><svg class="s1oe8ixe" width="16px" height="16px"><use xlink:href="https://osome.com/_next/static/media/sprites.57a3582aad3f27c9c59d076fbd1e820d.svg#minus.16.icon_1laoi"></use></svg></span></summary><ul class="fxupmtt sa3pmdp"><li class="c1atdfcq ber198w srre38f" itemscope="" itemType="http://www.schema.org/SiteNavigationElement"><a href="https://osome.com/sg/incorporation/for-foreigners/" class="lvn0v5d footer-menu-item" itemProp="url">For Foreigners</a></li><li class="c1atdfcq ber198w srre38f" itemscope="" itemType="http://www.schema.org/SiteNavigationElement"><a href="https://osome.com/sg/incorporation/" class="lvn0v5d footer-menu-item" itemProp="url">For Singaporeans &amp; PRs</a></li><li class="c1atdfcq ber198w srre38f" itemscope="" itemType="http://www.schema.org/SiteNavigationElement"><a href="https://osome.com/sg/aspire/" class="lvn0v5d footer-menu-item" itemProp="url">Aspire Business Account</a></li></ul>
 </details><details class="sgnb6x3"><summary class="c1atdfcq cm8v4w4 sk0l2f5">Accounting<span class="idt8w5m"><svg class="s1oe8ixe" width="16px" height="16px"><use xlink:href="https://osome.com/_next/static/media/sprites.57a3582aad3f27c9c59d076fbd1e820d.svg#plus.16.icon_2a78F"></use></svg><svg class="s1oe8ixe" width="16px" height="16px"><use xlink:href="https://osome.com/_next/static/media/sprites.57a3582aad3f27c9c59d076fbd1e820d.svg#minus.16.icon_1laoi"></use></svg></span></summary><ul class="fxupmtt sa3pmdp"><li class="c1atdfcq ber198w srre38f" itemscope="" itemType="http://www.schema.org/SiteNavigationElement"><a href="https://osome.com/sg/accounting-services-singapore/" class="lvn0v5d footer-menu-item" itemProp="url">Accounting &amp; Tax</a></li><li class="c1atdfcq ber198w srre38f" itemscope="" itemType="http://www.schema.org/SiteNavigationElement"><a href="https://osome.com/sg/ecommerce-accounting-services/" class="lvn0v5d footer-menu-item" itemProp="url">Ecommerce Accounting</a></li><li class="c1atdfcq ber198w srre38f" itemscope="" itemType="http://www.schema.org/SiteNavigationElement"><a href="https://osome.com/sg/accounting-for-tech-companies/" class="lvn0v5d footer-menu-item" itemProp="url">Accounting for Tech Companies</a></li><li class="c1atdfcq ber198w srre38f" itemscope="" itemType="http://www.schema.org/SiteNavigationElement"><a href="https://osome.com/sg/bookkeeping/" class="lvn0v5d footer-menu-item" itemProp="url">Bookkeeping</a></li></ul>
@@ -457,11 +438,15 @@ function shuffle(arr) {
 
 function init() {
   const findings = DATA;
+  const severityOrder = { critical: 0, warning: 1, info: 2 };
 
   // Pick a random subset of 20–55 findings in random order
   var shuffled = shuffle(findings);
   var count = Math.floor(Math.random() * (55 - 20 + 1)) + 20;
   allFindings = shuffled.slice(0, Math.min(count, shuffled.length));
+  allFindings.sort(function(a, b) {
+    return (severityOrder[a.severity] ?? 99) - (severityOrder[b.severity] ?? 99);
+  });
 
   // Stats — based on the displayed subset
   document.getElementById('stat-total').textContent = allFindings.length;
