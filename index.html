@@ -435,12 +435,12 @@
   reviewBtn.addEventListener('click', function() {
     if (!files.length || isReviewRunning) return;
     isReviewRunning = true;
-    reviewStatusText.textContent = 'Reviewing your accounts';
+    reviewStatusText.textContent = 'Reviewing your accounts..';
     reviewStatus.style.display = 'inline-flex';
     updateBtn();
 
     window.setTimeout(function() {
-      reviewStatusText.textContent = 'Confirming the findings';
+      reviewStatusText.textContent = 'Confirming the findings..';
     }, 4000);
 
     window.setTimeout(function() {
