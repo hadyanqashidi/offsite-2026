@@ -175,7 +175,7 @@
 @media (min-width: 768px) {
   .finding-header {
     grid-template-columns: auto 1fr;
-    align-items: start;
+    align-items: center;
     column-gap: 14px;
   }
 }
@@ -183,20 +183,35 @@
 .severity-badge {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   flex-shrink: 0;
   width: fit-content;
-  padding: 6px 10px;
+  min-height: 32px;
+  padding: 8px 12px;
   border-radius: 100px;
-  font-size: 11px;
-  font-weight: 450;
+  border: 1px solid transparent;
+  font-size: 12px;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   line-height: 1;
   white-space: nowrap;
 }
-.severity-critical { background: #FDE8E8; color: #C0392B; }
-.severity-warning  { background: #FFF3E0; color: #B7791F; }
-.severity-info     { background: #E8F4FD; color: #2471A3; }
+.severity-critical {
+  background: #FDE8E8;
+  border-color: #F4B4B0;
+  color: #B42318;
+}
+.severity-warning  {
+  background: #FFF3E0;
+  border-color: #F4CC7A;
+  color: #B36A00;
+}
+.severity-info     {
+  background: #E8F4FD;
+  border-color: #9FC9EA;
+  color: #1F6FB2;
+}
 
 .finding-title {
   font-family: "Suisse Int'l", "Helvetica Neue", "Arial", sans-serif;
@@ -294,7 +309,7 @@
   .findings-cta-section { padding: 32px 0 48px; }
 }
 .findings-cta-inner {
-  max-width: 720px;
+  max-width: 1440px;
 }
 .findings-cta-eyebrow {
   color: rgba(0, 0, 0, 0.6);
@@ -307,8 +322,8 @@
 }
 .findings-cta-copy {
   color: rgba(0, 0, 0, 0.72);
-  max-width: 520px;
-  margin-bottom: 40px;
+  max-width: 1440px;
+  margin-bottom: 16px;
 }
 .findings-cta-buttons {
   display: flex;
@@ -336,7 +351,7 @@
 <div class="findings-hero">
   <div class="findings-container">
     <h1 class="s1dmgi0d ci7yvy4">Your free AI Accounts Review</h1>
-    <p class="subtitle" id="company-line">Review completed for: <strong>ACME Pte Ltd</strong></p>
+    <p class="subtitle" id="company-line">A clear view of the issues surfaced in your books and what needs attention first.</p>
   </div>
 </div>
 
@@ -505,7 +520,7 @@ function renderFindings(all) {
       '</div>' +
       '<p class="finding-description">' + esc(f.description) + '</p>' +
       (f.action_required
-        ? '<p class="finding-action"><strong>Why it matters:</strong> ' + esc(f.action_required) + '</p>'
+        ? '<p class="finding-action"><strong>Recommended action:</strong> ' + esc(f.action_required) + '</p>'
         : '') +
     '</div>';
   }).join('');
