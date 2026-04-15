@@ -72,6 +72,7 @@
 }
 @media (min-width: 768px) {
   .stats-row { grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .stat-card--breakdown { grid-column: span 2; }
 }
 @media (min-width: 1024px) {
   .stats-row { padding: 24px 0 24px; }
@@ -109,23 +110,31 @@
 
 .stat-breakdown {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  align-items: stretch;
+  gap: 16px;
   margin-top: 2px;
 }
 .stat-breakdown-row {
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: center;
+  gap: 16px;
+  flex: 1 1 0;
+  min-width: 0;
 }
 .stat-breakdown-row .severity-badge {
-  min-width: 78px;
+  min-width: 92px;
   justify-content: center;
 }
 .stat-breakdown-count {
+  font-family: "Suisse Int'l", "Helvetica Neue", "Arial", sans-serif;
   font-weight: 450;
-  font-size: 16px;
+  font-size: 32px;
+  line-height: 1.05;
   color: #212833;
+}
+@media (min-width: 1024px) {
+  .stat-breakdown-count { font-size: 40px; }
 }
 
 /* Findings section */
@@ -257,6 +266,8 @@
   list-style: none;
   display: grid;
   gap: 14px;
+  margin: 0;
+  padding-inline-start: 0;
 }
 .info-card li {
   position: relative;
@@ -335,7 +346,7 @@
       <div class="stat-label">Findings found</div>
       <div class="stat-value" id="stat-total">&mdash;</div>
     </div>
-    <div class="stat-card">
+    <div class="stat-card stat-card--breakdown">
       <div class="stat-label">Breakdown</div>
       <div class="stat-breakdown" id="stat-breakdown"></div>
     </div>
@@ -360,18 +371,18 @@
       <div class="info-card">
         <h3 class="s1dmgi0d ci7yvy4">What this could mean</h3>
         <ul>
-          <li>Your books may contain missed issues</li>
-          <li>Your reviewer may not be checking consistently</li>
-          <li>You may be carrying hidden cleanup work</li>
+          <li>Errors in your books may still need urgent review</li>
+          <li>Delaying action could mean more cleanup, more follow-up, and more risk at month-end</li>
+          <li>If these issues are being missed now, they can continue affecting your reporting until someone fixes the root cause</li>
         </ul>
       </div>
       <div class="info-card">
         <h3 class="s1dmgi0d ci7yvy4">How Osome can help</h3>
         <ul>
-          <li>Review and validate the findings</li>
-          <li>Correct the accounting treatment</li>
-          <li>Improve month-end review quality</li>
-          <li>Take over ongoing accounting if needed</li>
+          <li>We can review the findings with you and confirm what needs fixing first</li>
+          <li>We can clean up the accounting treatment and resolve the issues properly</li>
+          <li>We can strengthen the review process so the same problems do not keep coming back</li>
+          <li>If your current setup is not giving you confidence, Osome can take over and run it properly for you</li>
         </ul>
       </div>
     </div>
