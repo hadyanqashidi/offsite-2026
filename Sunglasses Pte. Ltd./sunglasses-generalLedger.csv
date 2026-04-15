@@ -1,0 +1,13 @@
+date,account,description,reference,contact,debit,credit
+2026-03-01,Sales,Department store replenishment,INV-4102,Dept Store SG,0,26480
+2026-03-01,Accounts receivable,Department store replenishment,INV-4102,Dept Store SG,26480,0
+2026-03-04,Cost of goods sold,Polarised lens batch,BILL-1204,Polar Lens Supply Co,12420,0
+2026-03-04,Accounts payable,Polarised lens batch,BILL-1204,Polar Lens Supply Co,0,12420
+2026-03-10,Marketing,March creator campaign,MKT-884,Influencer House Media,4680,0
+2026-03-10,Accounts payable,March creator campaign,MKT-884,Influencer House Media,0,4680
+2026-03-15,Marketplace fees,Online marketplace commission,MKTPLC-317,Lazada SG,2310,0
+2026-03-15,Cash and cash equivalents,Online marketplace commission,MKTPLC-317,Lazada SG,0,2310
+2026-03-20,Salaries,March payroll,PAY-0331,Staff Payroll,30950,0
+2026-03-20,Cash and cash equivalents,March payroll,PAY-0331,Staff Payroll,0,30950
+2026-03-27,Rent,March showroom rent,RENT-0301,Marina Retail Holdings,7200,0
+2026-03-27,Cash and cash equivalents,March showroom rent,RENT-0301,Marina Retail Holdings,0,7200
