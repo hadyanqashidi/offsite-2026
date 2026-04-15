@@ -1,0 +1,2722 @@
+{
+    "reviewSession": {
+        "id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+        "company_id": 1269398,
+        "version": 2,
+        "branch": "SG",
+        "period_start": "2026-01-01",
+        "period_end": "2026-03-31",
+        "status": "completed",
+        "triggered_by": "service:run-endpoint",
+        "started_at": "2026-04-13T09:11:07.145315",
+        "completed_at": "2026-04-13T09:11:20.38",
+        "summary_stats": {
+            "info": 7,
+            "total": 78,
+            "warning": 66,
+            "critical": 5,
+            "aiFindings": 23,
+            "codeFindings": 55
+        },
+        "metadata": null,
+        "created_at": "2026-04-13T09:11:04.976188",
+        "updated_at": "2026-04-13T09:11:20.38",
+        "period_type": "month",
+        "comparison_periods": 3,
+        "ticket_id": 5807810,
+        "fiscal_period_id": 208769
+    },
+    "reviewFindings": [
+        {
+            "id": "fd317732-3d96-45d4-a286-15e975539180",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "aging",
+            "category": "current_liabilities",
+            "severity": "warning",
+            "title": "Payable overdue >91 days: Suspense contact",
+            "description": "Suspense contact has 6 invoices totaling S$ 22,217.00 overdue 60+ days.",
+            "section": "balance_sheet",
+            "account_name": "Accounts Payable",
+            "finding_type": "ap_aging_warning",
+            "assertion": "accuracy",
+            "source": "code",
+            "amount": 22217,
+            "evidence": {
+                "days": 91,
+                "type": "payable",
+                "contact": "Suspense contact",
+                "agingBucket": "91 - 120 days",
+                "invoiceCount": 6
+            },
+            "action_required": "Review overdue payable and follow up.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "c96aa3e6-bc53-44d6-9a93-f6a062671a85",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "aging",
+            "category": "current_assets",
+            "severity": "warning",
+            "title": "Receivable overdue >91 days: Suspense contact",
+            "description": "Suspense contact has 1 invoice totaling S$ 5,665.00 overdue 60+ days.",
+            "section": "balance_sheet",
+            "account_name": "Accounts Receivable",
+            "finding_type": "ar_aging_warning",
+            "assertion": "accuracy",
+            "source": "code",
+            "amount": 5665,
+            "evidence": {
+                "days": 91,
+                "type": "receivable",
+                "contact": "Suspense contact",
+                "agingBucket": "91 - 120 days",
+                "invoiceCount": 1
+            },
+            "action_required": "Follow up on outstanding receivable.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "1210b890-bed5-4359-a075-7fc0bd2997e9",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "aging",
+            "category": "current_liabilities",
+            "severity": "warning",
+            "title": "Payable overdue >91 days: Amazon",
+            "description": "Amazon has 1 invoice totaling S$ 1.52 overdue 60+ days.",
+            "section": "balance_sheet",
+            "account_name": "Accounts Payable",
+            "finding_type": "ap_aging_warning",
+            "assertion": "accuracy",
+            "source": "code",
+            "amount": 1.52,
+            "evidence": {
+                "days": 91,
+                "type": "payable",
+                "contact": "Amazon",
+                "agingBucket": "91 - 120 days",
+                "invoiceCount": 1
+            },
+            "action_required": "Review overdue payable and follow up.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "a9ad553a-a07a-41d8-af6c-750e4ab937c4",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "aging",
+            "category": "current_liabilities",
+            "severity": "critical",
+            "title": "Payable overdue >121 days: Suspense contact",
+            "description": "Suspense contact has 153 invoices totaling S$ 15,135,384.00 overdue 120+ days.",
+            "section": "balance_sheet",
+            "account_name": "Accounts Payable",
+            "finding_type": "ap_aging_overdue",
+            "assertion": "accuracy",
+            "source": "code",
+            "amount": 15135384,
+            "evidence": {
+                "days": 121,
+                "type": "payable",
+                "contact": "Suspense contact",
+                "agingBucket": "> 121 days",
+                "invoiceCount": 153
+            },
+            "action_required": "Review overdue payable. Check if dispute or payment plan exists.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "177ecbf6-5a36-4cf7-a300-67bd5f3deff6",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "bank_reconciliation",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Large bank balance movement: Airwallex USD (USD)",
+            "description": "Bank account \"Airwallex USD (USD)\" balance changed by 6888% (S$ 1,000.00 \u2192 S$ 69,881.00).",
+            "section": "bank_reconciliation",
+            "account_name": "Airwallex USD (USD)",
+            "finding_type": "large_bank_movement",
+            "assertion": "accuracy",
+            "source": "code",
+            "amount": 68881,
+            "evidence": {
+                "bankAccount": "Airwallex USD (USD)",
+                "priorBalance": 1000,
+                "changePercent": "6888.1",
+                "currentBalance": 69881
+            },
+            "action_required": "Review the large balance movement for unusual transactions.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "d65f3114-729c-4389-9d40-587e69d9bff6",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "balance_confirmation",
+            "category": "uncategorized",
+            "severity": "info",
+            "title": "Balance confirmation required",
+            "description": "The following accounts have non-zero balances and require confirmation: Accounts receivable (S$ 30,073,495.00), Accounts payable (S$ 15,157,602.54).",
+            "section": "balance_sheet",
+            "account_name": null,
+            "finding_type": "balance_confirmation_required",
+            "assertion": "existence",
+            "source": "code",
+            "amount": null,
+            "evidence": {
+                "accounts": [
+                    {
+                        "name": "Accounts receivable",
+                        "amount": 30073495
+                    },
+                    {
+                        "name": "Accounts payable",
+                        "amount": 15157602.54
+                    }
+                ]
+            },
+            "action_required": "Obtain balance confirmations from relevant parties for the identified accounts.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "cf951e21-36a5-4164-8604-34f470181fbe",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "recurring_expense",
+            "category": "operating_expenses",
+            "severity": "warning",
+            "title": "Central Provident Fund not found in P&L",
+            "description": "No account matching \"Central Provident Fund\" was found in the Profit & Loss report. This is a required statutory expense.",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "missing_cpf",
+            "assertion": "completeness",
+            "source": "code",
+            "amount": null,
+            "evidence": {
+                "patterns": [
+                    "cpf",
+                    "central provident"
+                ],
+                "statutoryId": "cpf"
+            },
+            "action_required": "Verify that Central Provident Fund is recorded in the correct account.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "e56992a6-6116-4736-bb18-b1e73f021950",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "recurring_expense",
+            "category": "operating_expenses",
+            "severity": "warning",
+            "title": "Skills Development Levy not found in P&L",
+            "description": "No account matching \"Skills Development Levy\" was found in the Profit & Loss report. This is a required statutory expense.",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "missing_sdl",
+            "assertion": "completeness",
+            "source": "code",
+            "amount": null,
+            "evidence": {
+                "patterns": [
+                    "sdl",
+                    "skills development"
+                ],
+                "statutoryId": "sdl"
+            },
+            "action_required": "Verify that Skills Development Levy is recorded in the correct account.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "27918f81-ff20-47ae-ae15-2bc8f68fc187",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "duplicate_invoice",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Duplicate reference: (in)",
+            "description": "2 documents share reference \"(in)\".",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "duplicate_reference",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 1000,
+            "evidence": {
+                "count": 2,
+                "dates": [
+                    "2026-03-01T00:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z"
+                ],
+                "contacts": [
+                    "Suspense contact"
+                ],
+                "criteria": [
+                    "same_reference"
+                ],
+                "reference": "(in)",
+                "acDocumentIds": [
+                    48436773,
+                    48374841
+                ],
+                "crDocumentIds": []
+            },
+            "action_required": "Verify these are not duplicate documents sharing the same reference.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "d2f7813b-009d-4ddc-b184-f4c68ac73a3c",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "duplicate_invoice",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Duplicate reference: 1",
+            "description": "3 documents share reference \"1\".",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "duplicate_reference",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 1102.86,
+            "evidence": {
+                "count": 3,
+                "dates": [
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z"
+                ],
+                "contacts": [
+                    "Suspense contact"
+                ],
+                "criteria": [
+                    "same_reference"
+                ],
+                "reference": "1",
+                "acDocumentIds": [
+                    48183270,
+                    48183312,
+                    48183256
+                ],
+                "crDocumentIds": []
+            },
+            "action_required": "Verify these are not duplicate documents sharing the same reference.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "23307c01-34a7-4065-a075-9b1ffe72db21",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "duplicate_invoice",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Duplicate reference: 2",
+            "description": "3 documents share reference \"2\".",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "duplicate_reference",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 176.48,
+            "evidence": {
+                "count": 3,
+                "dates": [
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z"
+                ],
+                "contacts": [
+                    "Suspense contact"
+                ],
+                "criteria": [
+                    "same_reference"
+                ],
+                "reference": "2",
+                "acDocumentIds": [
+                    48183271,
+                    48183257,
+                    48183313
+                ],
+                "crDocumentIds": []
+            },
+            "action_required": "Verify these are not duplicate documents sharing the same reference.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "f25df48a-b295-4f17-aee1-97eba235cd15",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "duplicate_invoice",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Duplicate reference: 3",
+            "description": "3 documents share reference \"3\".",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "duplicate_reference",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 28.95,
+            "evidence": {
+                "count": 3,
+                "dates": [
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z"
+                ],
+                "contacts": [
+                    "Suspense contact"
+                ],
+                "criteria": [
+                    "same_reference"
+                ],
+                "reference": "3",
+                "acDocumentIds": [
+                    48183314,
+                    48183272,
+                    48183258
+                ],
+                "crDocumentIds": []
+            },
+            "action_required": "Verify these are not duplicate documents sharing the same reference.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "f8befe97-b9b1-40cb-bc0c-f1dd600c9bc7",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "duplicate_invoice",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Duplicate reference: 6",
+            "description": "3 documents share reference \"6\".",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "duplicate_reference",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 679.84,
+            "evidence": {
+                "count": 3,
+                "dates": [
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z"
+                ],
+                "contacts": [
+                    "Suspense contact"
+                ],
+                "criteria": [
+                    "same_reference"
+                ],
+                "reference": "6",
+                "acDocumentIds": [
+                    48183259,
+                    48183315,
+                    48183273
+                ],
+                "crDocumentIds": []
+            },
+            "action_required": "Verify these are not duplicate documents sharing the same reference.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "7804b81f-2f8a-4b35-a106-d79e732e016b",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "duplicate_invoice",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Duplicate reference: 7",
+            "description": "3 documents share reference \"7\".",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "duplicate_reference",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 28.35,
+            "evidence": {
+                "count": 3,
+                "dates": [
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z"
+                ],
+                "contacts": [
+                    "Suspense contact"
+                ],
+                "criteria": [
+                    "same_reference"
+                ],
+                "reference": "7",
+                "acDocumentIds": [
+                    48183274,
+                    48183316,
+                    48183260
+                ],
+                "crDocumentIds": []
+            },
+            "action_required": "Verify these are not duplicate documents sharing the same reference.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "b2ea18e6-c584-4de0-a95a-6dc18ac88ec6",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "duplicate_invoice",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Duplicate reference: 8",
+            "description": "2 documents share reference \"8\".",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "duplicate_reference",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 7.11,
+            "evidence": {
+                "count": 2,
+                "dates": [
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z"
+                ],
+                "contacts": [
+                    "Suspense contact"
+                ],
+                "criteria": [
+                    "same_reference"
+                ],
+                "reference": "8",
+                "acDocumentIds": [
+                    48183275,
+                    48183317
+                ],
+                "crDocumentIds": []
+            },
+            "action_required": "Verify these are not duplicate documents sharing the same reference.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "c792a4db-c994-4b20-a230-eb96749a5886",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "duplicate_invoice",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Duplicate reference: 15",
+            "description": "2 documents share reference \"15\".",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "duplicate_reference",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 0.49,
+            "evidence": {
+                "count": 2,
+                "dates": [
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z"
+                ],
+                "contacts": [
+                    "Suspense contact"
+                ],
+                "criteria": [
+                    "same_reference"
+                ],
+                "reference": "15",
+                "acDocumentIds": [
+                    48183276,
+                    48183318
+                ],
+                "crDocumentIds": []
+            },
+            "action_required": "Verify these are not duplicate documents sharing the same reference.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "9d05c65e-2e31-4c12-b36c-8ac050c36c36",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "duplicate_invoice",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Duplicate reference: 16",
+            "description": "2 documents share reference \"16\".",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "duplicate_reference",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 101.85,
+            "evidence": {
+                "count": 2,
+                "dates": [
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z"
+                ],
+                "contacts": [
+                    "Suspense contact"
+                ],
+                "criteria": [
+                    "same_reference"
+                ],
+                "reference": "16",
+                "acDocumentIds": [
+                    48183277,
+                    48183319
+                ],
+                "crDocumentIds": []
+            },
+            "action_required": "Verify these are not duplicate documents sharing the same reference.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "240e7af0-aa03-429f-bb97-73babdf32a0a",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "duplicate_invoice",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Duplicate reference: 17",
+            "description": "2 documents share reference \"17\".",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "duplicate_reference",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 134.45,
+            "evidence": {
+                "count": 2,
+                "dates": [
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z"
+                ],
+                "contacts": [
+                    "Suspense contact"
+                ],
+                "criteria": [
+                    "same_reference"
+                ],
+                "reference": "17",
+                "acDocumentIds": [
+                    48183278,
+                    48183320
+                ],
+                "crDocumentIds": []
+            },
+            "action_required": "Verify these are not duplicate documents sharing the same reference.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "7f6ec282-4ed2-491b-bea1-534bf6a05f62",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "duplicate_invoice",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Duplicate reference: 18",
+            "description": "2 documents share reference \"18\".",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "duplicate_reference",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 12.1,
+            "evidence": {
+                "count": 2,
+                "dates": [
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z"
+                ],
+                "contacts": [
+                    "Suspense contact"
+                ],
+                "criteria": [
+                    "same_reference"
+                ],
+                "reference": "18",
+                "acDocumentIds": [
+                    48183279,
+                    48183321
+                ],
+                "crDocumentIds": []
+            },
+            "action_required": "Verify these are not duplicate documents sharing the same reference.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "0e6395fc-9058-4eaa-9d47-a5bc6db064b0",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "duplicate_invoice",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Duplicate reference: 25",
+            "description": "2 documents share reference \"25\".",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "duplicate_reference",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 40.33,
+            "evidence": {
+                "count": 2,
+                "dates": [
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z"
+                ],
+                "contacts": [
+                    "Suspense contact"
+                ],
+                "criteria": [
+                    "same_reference"
+                ],
+                "reference": "25",
+                "acDocumentIds": [
+                    48183322,
+                    48183280
+                ],
+                "crDocumentIds": []
+            },
+            "action_required": "Verify these are not duplicate documents sharing the same reference.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "f7a39841-6fc4-4a7a-a437-dd5c67576102",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "duplicate_invoice",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Duplicate reference: 26",
+            "description": "2 documents share reference \"26\".",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "duplicate_reference",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 2.64,
+            "evidence": {
+                "count": 2,
+                "dates": [
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z"
+                ],
+                "contacts": [
+                    "Suspense contact"
+                ],
+                "criteria": [
+                    "same_reference"
+                ],
+                "reference": "26",
+                "acDocumentIds": [
+                    48183281,
+                    48183323
+                ],
+                "crDocumentIds": []
+            },
+            "action_required": "Verify these are not duplicate documents sharing the same reference.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "6845f6f6-d784-45fe-b958-28cc7a2bb25a",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "duplicate_invoice",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Duplicate reference: 144",
+            "description": "2 documents share reference \"144\".",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "duplicate_reference",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 275.75,
+            "evidence": {
+                "count": 2,
+                "dates": [
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z"
+                ],
+                "contacts": [
+                    "Suspense contact"
+                ],
+                "criteria": [
+                    "same_reference"
+                ],
+                "reference": "144",
+                "acDocumentIds": [
+                    48183289,
+                    48183324
+                ],
+                "crDocumentIds": []
+            },
+            "action_required": "Verify these are not duplicate documents sharing the same reference.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "c5d2605b-4bd3-45e6-b61e-1ed6331665c8",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "duplicate_invoice",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Duplicate reference: 151",
+            "description": "2 documents share reference \"151\".",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "duplicate_reference",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 460.32,
+            "evidence": {
+                "count": 2,
+                "dates": [
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z"
+                ],
+                "contacts": [
+                    "Suspense contact"
+                ],
+                "criteria": [
+                    "same_reference"
+                ],
+                "reference": "151",
+                "acDocumentIds": [
+                    48183290,
+                    48183325
+                ],
+                "crDocumentIds": []
+            },
+            "action_required": "Verify these are not duplicate documents sharing the same reference.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "988e44b6-eb99-415e-a9bc-3c440bcd2ae1",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "duplicate_invoice",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Duplicate reference: 152",
+            "description": "2 documents share reference \"152\".",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "duplicate_reference",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 69.36,
+            "evidence": {
+                "count": 2,
+                "dates": [
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z"
+                ],
+                "contacts": [
+                    "Suspense contact"
+                ],
+                "criteria": [
+                    "same_reference"
+                ],
+                "reference": "152",
+                "acDocumentIds": [
+                    48183291,
+                    48183326
+                ],
+                "crDocumentIds": []
+            },
+            "action_required": "Verify these are not duplicate documents sharing the same reference.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "ec6618ac-c5e7-43ab-8032-7510e4ed0c0d",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "duplicate_invoice",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Duplicate reference: 153",
+            "description": "2 documents share reference \"153\".",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "duplicate_reference",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 5.41,
+            "evidence": {
+                "count": 2,
+                "dates": [
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z"
+                ],
+                "contacts": [
+                    "Suspense contact"
+                ],
+                "criteria": [
+                    "same_reference"
+                ],
+                "reference": "153",
+                "acDocumentIds": [
+                    48183327,
+                    48183292
+                ],
+                "crDocumentIds": []
+            },
+            "action_required": "Verify these are not duplicate documents sharing the same reference.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "6e270b68-c77b-4887-8178-f3bf1a1e2092",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "duplicate_invoice",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Duplicate reference: 161",
+            "description": "2 documents share reference \"161\".",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "duplicate_reference",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 2079.93,
+            "evidence": {
+                "count": 2,
+                "dates": [
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z"
+                ],
+                "contacts": [
+                    "Suspense contact"
+                ],
+                "criteria": [
+                    "same_reference"
+                ],
+                "reference": "161",
+                "acDocumentIds": [
+                    48183293,
+                    48183328
+                ],
+                "crDocumentIds": []
+            },
+            "action_required": "Verify these are not duplicate documents sharing the same reference.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "d8450bb5-8aca-4c33-914a-7ec6354a06fe",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "duplicate_invoice",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Duplicate reference: 162",
+            "description": "2 documents share reference \"162\".",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "duplicate_reference",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 13.88,
+            "evidence": {
+                "count": 2,
+                "dates": [
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z"
+                ],
+                "contacts": [
+                    "Suspense contact"
+                ],
+                "criteria": [
+                    "same_reference"
+                ],
+                "reference": "162",
+                "acDocumentIds": [
+                    48183329,
+                    48183294
+                ],
+                "crDocumentIds": []
+            },
+            "action_required": "Verify these are not duplicate documents sharing the same reference.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "06b21733-38a7-4fc5-82da-ebac90033a78",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "duplicate_invoice",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Duplicate reference: 163",
+            "description": "2 documents share reference \"163\".",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "duplicate_reference",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 1.21,
+            "evidence": {
+                "count": 2,
+                "dates": [
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z"
+                ],
+                "contacts": [
+                    "Suspense contact"
+                ],
+                "criteria": [
+                    "same_reference"
+                ],
+                "reference": "163",
+                "acDocumentIds": [
+                    48183330,
+                    48183295
+                ],
+                "crDocumentIds": []
+            },
+            "action_required": "Verify these are not duplicate documents sharing the same reference.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "fb156809-bf67-46ff-a234-e163836e7f78",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "duplicate_invoice",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Duplicate reference: 171",
+            "description": "2 documents share reference \"171\".",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "duplicate_reference",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 970.84,
+            "evidence": {
+                "count": 2,
+                "dates": [
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z"
+                ],
+                "contacts": [
+                    "Suspense contact"
+                ],
+                "criteria": [
+                    "same_reference"
+                ],
+                "reference": "171",
+                "acDocumentIds": [
+                    48183296,
+                    48183331
+                ],
+                "crDocumentIds": []
+            },
+            "action_required": "Verify these are not duplicate documents sharing the same reference.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "0e0834ca-e618-42f0-b60c-36e2069e1628",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "duplicate_invoice",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Duplicate reference: 172",
+            "description": "2 documents share reference \"172\".",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "duplicate_reference",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 1910.95,
+            "evidence": {
+                "count": 2,
+                "dates": [
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z"
+                ],
+                "contacts": [
+                    "Suspense contact"
+                ],
+                "criteria": [
+                    "same_reference"
+                ],
+                "reference": "172",
+                "acDocumentIds": [
+                    48183297,
+                    48183332
+                ],
+                "crDocumentIds": []
+            },
+            "action_required": "Verify these are not duplicate documents sharing the same reference.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "c679e86b-660a-42fe-9a6d-2af46f0a0673",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "duplicate_invoice",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Duplicate reference: 173",
+            "description": "2 documents share reference \"173\".",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "duplicate_reference",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 841.38,
+            "evidence": {
+                "count": 2,
+                "dates": [
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z"
+                ],
+                "contacts": [
+                    "Suspense contact"
+                ],
+                "criteria": [
+                    "same_reference"
+                ],
+                "reference": "173",
+                "acDocumentIds": [
+                    48183298,
+                    48183333
+                ],
+                "crDocumentIds": []
+            },
+            "action_required": "Verify these are not duplicate documents sharing the same reference.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "400c4b42-6728-4f73-aed1-076f20ad1ca6",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "duplicate_invoice",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Duplicate reference: 182",
+            "description": "2 documents share reference \"182\".",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "duplicate_reference",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 239.69,
+            "evidence": {
+                "count": 2,
+                "dates": [
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z"
+                ],
+                "contacts": [
+                    "Suspense contact"
+                ],
+                "criteria": [
+                    "same_reference"
+                ],
+                "reference": "182",
+                "acDocumentIds": [
+                    48183299,
+                    48183334
+                ],
+                "crDocumentIds": []
+            },
+            "action_required": "Verify these are not duplicate documents sharing the same reference.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "07bab674-87c4-4860-b5fe-75abc3bf6f2d",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "duplicate_invoice",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Duplicate reference: 183",
+            "description": "2 documents share reference \"183\".",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "duplicate_reference",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 36.36,
+            "evidence": {
+                "count": 2,
+                "dates": [
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z"
+                ],
+                "contacts": [
+                    "Suspense contact"
+                ],
+                "criteria": [
+                    "same_reference"
+                ],
+                "reference": "183",
+                "acDocumentIds": [
+                    48183335,
+                    48183300
+                ],
+                "crDocumentIds": []
+            },
+            "action_required": "Verify these are not duplicate documents sharing the same reference.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "c7539f4d-829e-4ef7-93bc-5cce28063099",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "duplicate_invoice",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Duplicate reference: 192",
+            "description": "2 documents share reference \"192\".",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "duplicate_reference",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 255.55,
+            "evidence": {
+                "count": 2,
+                "dates": [
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z"
+                ],
+                "contacts": [
+                    "Suspense contact"
+                ],
+                "criteria": [
+                    "same_reference"
+                ],
+                "reference": "192",
+                "acDocumentIds": [
+                    48183301,
+                    48183336
+                ],
+                "crDocumentIds": []
+            },
+            "action_required": "Verify these are not duplicate documents sharing the same reference.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "988c300b-9b59-4b11-9948-d5b799085e57",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "duplicate_invoice",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Duplicate reference: 193",
+            "description": "2 documents share reference \"193\".",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "duplicate_reference",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 753.98,
+            "evidence": {
+                "count": 2,
+                "dates": [
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z"
+                ],
+                "contacts": [
+                    "Suspense contact"
+                ],
+                "criteria": [
+                    "same_reference"
+                ],
+                "reference": "193",
+                "acDocumentIds": [
+                    48183302,
+                    48183337
+                ],
+                "crDocumentIds": []
+            },
+            "action_required": "Verify these are not duplicate documents sharing the same reference.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "c3dc074c-3f0b-468a-977b-2ec0f5bc4cbd",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "duplicate_invoice",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Duplicate reference: 194",
+            "description": "3 documents share reference \"194\".",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "duplicate_reference",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 1846.51,
+            "evidence": {
+                "count": 3,
+                "dates": [
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z"
+                ],
+                "contacts": [
+                    "Suspense contact"
+                ],
+                "criteria": [
+                    "same_reference"
+                ],
+                "reference": "194",
+                "acDocumentIds": [
+                    48183303,
+                    48183338,
+                    48183261
+                ],
+                "crDocumentIds": []
+            },
+            "action_required": "Verify these are not duplicate documents sharing the same reference.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "1b19bd27-e90c-4c6f-870c-a2911969844d",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "duplicate_invoice",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Duplicate reference: 202",
+            "description": "3 documents share reference \"202\".",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "duplicate_reference",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 492.79,
+            "evidence": {
+                "count": 3,
+                "dates": [
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z"
+                ],
+                "contacts": [
+                    "Suspense contact"
+                ],
+                "criteria": [
+                    "same_reference"
+                ],
+                "reference": "202",
+                "acDocumentIds": [
+                    48183304,
+                    48183262,
+                    48183339
+                ],
+                "crDocumentIds": []
+            },
+            "action_required": "Verify these are not duplicate documents sharing the same reference.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "5d0bf264-54a2-48ff-a50c-f6c70f0d1596",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "duplicate_invoice",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Duplicate reference: 203",
+            "description": "3 documents share reference \"203\".",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "duplicate_reference",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 384.16,
+            "evidence": {
+                "count": 3,
+                "dates": [
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z"
+                ],
+                "contacts": [
+                    "Suspense contact"
+                ],
+                "criteria": [
+                    "same_reference"
+                ],
+                "reference": "203",
+                "acDocumentIds": [
+                    48183305,
+                    48183340,
+                    48183263
+                ],
+                "crDocumentIds": []
+            },
+            "action_required": "Verify these are not duplicate documents sharing the same reference.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "abee9683-1320-4c70-9d0d-0e23f3d49bc0",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "duplicate_invoice",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Duplicate reference: 204",
+            "description": "3 documents share reference \"204\".",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "duplicate_reference",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 769.55,
+            "evidence": {
+                "count": 3,
+                "dates": [
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z"
+                ],
+                "contacts": [
+                    "Suspense contact"
+                ],
+                "criteria": [
+                    "same_reference"
+                ],
+                "reference": "204",
+                "acDocumentIds": [
+                    48183306,
+                    48183264,
+                    48183341
+                ],
+                "crDocumentIds": []
+            },
+            "action_required": "Verify these are not duplicate documents sharing the same reference.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "62198005-0fda-43da-b23c-1b57e2912ab7",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "duplicate_invoice",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Duplicate reference: 212",
+            "description": "3 documents share reference \"212\".",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "duplicate_reference",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 27.73,
+            "evidence": {
+                "count": 3,
+                "dates": [
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z"
+                ],
+                "contacts": [
+                    "Suspense contact"
+                ],
+                "criteria": [
+                    "same_reference"
+                ],
+                "reference": "212",
+                "acDocumentIds": [
+                    48183307,
+                    48183342,
+                    48183265
+                ],
+                "crDocumentIds": []
+            },
+            "action_required": "Verify these are not duplicate documents sharing the same reference.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "4401b2d5-f7d0-42a1-a900-a478eab11755",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "duplicate_invoice",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Duplicate reference: 213",
+            "description": "3 documents share reference \"213\".",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "duplicate_reference",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 275.8,
+            "evidence": {
+                "count": 3,
+                "dates": [
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z"
+                ],
+                "contacts": [
+                    "Suspense contact"
+                ],
+                "criteria": [
+                    "same_reference"
+                ],
+                "reference": "213",
+                "acDocumentIds": [
+                    48183266,
+                    48183343,
+                    48183308
+                ],
+                "crDocumentIds": []
+            },
+            "action_required": "Verify these are not duplicate documents sharing the same reference.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "ad667ba2-4d33-45df-943f-58ce7ba5ec61",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "duplicate_invoice",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Duplicate reference: 214",
+            "description": "3 documents share reference \"214\".",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "duplicate_reference",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 110.56,
+            "evidence": {
+                "count": 3,
+                "dates": [
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z"
+                ],
+                "contacts": [
+                    "Suspense contact"
+                ],
+                "criteria": [
+                    "same_reference"
+                ],
+                "reference": "214",
+                "acDocumentIds": [
+                    48183309,
+                    48183267,
+                    48183344
+                ],
+                "crDocumentIds": []
+            },
+            "action_required": "Verify these are not duplicate documents sharing the same reference.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "fb5ece75-16ed-4761-9e15-74e9ce95ece3",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "duplicate_invoice",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Duplicate reference: 222",
+            "description": "3 documents share reference \"222\".",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "duplicate_reference",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 97.48,
+            "evidence": {
+                "count": 3,
+                "dates": [
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z"
+                ],
+                "contacts": [
+                    "Suspense contact"
+                ],
+                "criteria": [
+                    "same_reference"
+                ],
+                "reference": "222",
+                "acDocumentIds": [
+                    48183310,
+                    48183345,
+                    48183268
+                ],
+                "crDocumentIds": []
+            },
+            "action_required": "Verify these are not duplicate documents sharing the same reference.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "6b0aa1aa-320d-43b0-8cc0-af97a2536d8e",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "duplicate_invoice",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Duplicate reference: 223",
+            "description": "3 documents share reference \"223\".",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "duplicate_reference",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 9.81,
+            "evidence": {
+                "count": 3,
+                "dates": [
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z",
+                    "2026-03-30T16:00:00.000Z"
+                ],
+                "contacts": [
+                    "Suspense contact"
+                ],
+                "criteria": [
+                    "same_reference"
+                ],
+                "reference": "223",
+                "acDocumentIds": [
+                    48183346,
+                    48183311,
+                    48183269
+                ],
+                "crDocumentIds": []
+            },
+            "action_required": "Verify these are not duplicate documents sharing the same reference.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "02c87369-a3fa-48b4-bdf7-7b1e88eecbfb",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "suspicious_transaction",
+            "category": "uncategorized",
+            "severity": "info",
+            "title": "Vague description: \"general expense\"",
+            "description": "Transaction of S$ 1,264.88 has vague description \"general expense\" which may lack proper documentation.",
+            "section": "profit_loss",
+            "account_name": "Accounts payable",
+            "finding_type": "vague_description",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 1264.88,
+            "evidence": {
+                "date": "2026-03-01T00:00:00.000Z",
+                "contact": "Suspense contact",
+                "description": "general expense",
+                "acDocumentIds": [
+                    48436773
+                ],
+                "crDocumentIds": []
+            },
+            "action_required": "Request a more specific description for this transaction.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "3d39d750-7a53-4034-b0a7-0532f7bf2813",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "suspicious_transaction",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Transaction 5.3x average amount",
+            "description": "Transaction of S$ 1,524.58 is 5.3x the average transaction amount of S$ 287.28.",
+            "section": "profit_loss",
+            "account_name": "Bank revaluations",
+            "finding_type": "large_amount_relative",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 1524.58,
+            "evidence": {
+                "date": "2025-12-31T16:00:00.000Z",
+                "contact": "",
+                "multiplier": 5.306998769209935,
+                "acDocumentIds": [
+                    -1
+                ],
+                "averageAmount": 287.27724770642214,
+                "crDocumentIds": []
+            },
+            "action_required": "Review this unusually large transaction relative to normal activity.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "ff6cb517-6b56-485d-80c0-ce28d4e86242",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "suspicious_transaction",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Transaction 6.7x average amount",
+            "description": "Transaction of S$ 1,926.65 is 6.7x the average transaction amount of S$ 287.28.",
+            "section": "profit_loss",
+            "account_name": "Bank revaluations",
+            "finding_type": "large_amount_relative",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 1926.65,
+            "evidence": {
+                "date": "2026-03-30T16:00:00.000Z",
+                "contact": "Suspense contact",
+                "multiplier": 6.7065875052134505,
+                "acDocumentIds": [
+                    48183256
+                ],
+                "averageAmount": 287.27724770642214,
+                "crDocumentIds": []
+            },
+            "action_required": "Review this unusually large transaction relative to normal activity.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "62b26b13-b6f4-4669-b6c1-be2e08f5916c",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "suspicious_transaction",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Transaction 7.2x average amount",
+            "description": "Transaction of S$ 2,079.93 is 7.2x the average transaction amount of S$ 287.28.",
+            "section": "profit_loss",
+            "account_name": "Bank revaluations",
+            "finding_type": "large_amount_relative",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 2079.93,
+            "evidence": {
+                "date": "2026-03-30T16:00:00.000Z",
+                "contact": "Suspense contact",
+                "multiplier": 7.24014872951424,
+                "acDocumentIds": [
+                    48183293
+                ],
+                "averageAmount": 287.27724770642214,
+                "crDocumentIds": []
+            },
+            "action_required": "Review this unusually large transaction relative to normal activity.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "71cc61a2-626a-4b5d-85e3-c12b55937a04",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "suspicious_transaction",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Transaction 6.7x average amount",
+            "description": "Transaction of S$ 1,910.95 is 6.7x the average transaction amount of S$ 287.28.",
+            "section": "profit_loss",
+            "account_name": "Bank revaluations",
+            "finding_type": "large_amount_relative",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 1910.95,
+            "evidence": {
+                "date": "2026-03-30T16:00:00.000Z",
+                "contact": "Suspense contact",
+                "multiplier": 6.651936466450908,
+                "acDocumentIds": [
+                    48183297
+                ],
+                "averageAmount": 287.27724770642214,
+                "crDocumentIds": []
+            },
+            "action_required": "Review this unusually large transaction relative to normal activity.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "ff5e7655-e0d3-465d-932f-a02660ff7e86",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "suspicious_transaction",
+            "category": "uncategorized",
+            "severity": "warning",
+            "title": "Transaction 6.4x average amount",
+            "description": "Transaction of S$ 1,846.51 is 6.4x the average transaction amount of S$ 287.28.",
+            "section": "profit_loss",
+            "account_name": "Bank revaluations",
+            "finding_type": "large_amount_relative",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 1846.51,
+            "evidence": {
+                "date": "2026-03-30T16:00:00.000Z",
+                "contact": "Suspense contact",
+                "multiplier": 6.42762354047268,
+                "acDocumentIds": [
+                    48183303
+                ],
+                "averageAmount": 287.27724770642214,
+                "crDocumentIds": []
+            },
+            "action_required": "Review this unusually large transaction relative to normal activity.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "fa4a7f8d-57fa-4b10-b676-c2ab49359079",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "suspicious_transaction",
+            "category": "uncategorized",
+            "severity": "info",
+            "title": "Vague description: \"general expense\"",
+            "description": "Transaction of S$ 1,264.88 has vague description \"general expense\" which may lack proper documentation.",
+            "section": "profit_loss",
+            "account_name": "General expenses",
+            "finding_type": "vague_description",
+            "assertion": "existence",
+            "source": "code",
+            "amount": 1264.88,
+            "evidence": {
+                "date": "2026-03-01T00:00:00.000Z",
+                "contact": "Suspense contact",
+                "description": "general expense",
+                "acDocumentIds": [
+                    48436773
+                ],
+                "crDocumentIds": []
+            },
+            "action_required": "Request a more specific description for this transaction.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "bbdd9afd-764c-4d2f-9610-144db7b5a567",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "branch_specific",
+            "category": "operating_expenses",
+            "severity": "critical",
+            "title": "No Central Provident Fund transactions found",
+            "description": "No transactions matching \"Central Provident Fund\" were found. This is a required statutory expense for Singapore.",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "missing_cpf_transactions",
+            "assertion": "completeness",
+            "source": "code",
+            "amount": null,
+            "evidence": {
+                "branch": "SG",
+                "statutoryId": "cpf",
+                "requiredFrequency": "monthly"
+            },
+            "action_required": "Verify that Central Provident Fund payments are being made and recorded correctly.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "adb3e41e-d9bc-49cc-abcd-3a063779ce12",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "branch_specific",
+            "category": "operating_expenses",
+            "severity": "critical",
+            "title": "No Skills Development Levy transactions found",
+            "description": "No transactions matching \"Skills Development Levy\" were found. This is a required statutory expense for Singapore.",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "missing_sdl_transactions",
+            "assertion": "completeness",
+            "source": "code",
+            "amount": null,
+            "evidence": {
+                "branch": "SG",
+                "statutoryId": "sdl",
+                "requiredFrequency": "monthly"
+            },
+            "action_required": "Verify that Skills Development Levy payments are being made and recorded correctly.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "3d706450-9cc6-4fe7-bff5-c784719d2b59",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "balance_sheet",
+            "category": "equity",
+            "severity": "warning",
+            "title": "Large variance in \"Current year earnings\" (317963%)",
+            "description": "\"Current year earnings\" changed by 317963% from S$ 293.77 to S$ 934,373.77.",
+            "section": "balance_sheet",
+            "account_name": "Current year earnings",
+            "finding_type": "large_variance",
+            "assertion": "accuracy",
+            "source": "code",
+            "amount": 934080,
+            "evidence": {
+                "priorAmount": 293.77,
+                "currentAmount": 934373.77,
+                "variancePercent": "317963.0"
+            },
+            "action_required": "Investigate the significant balance change.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "47223de9-2721-4cef-b329-a3e68b5a627a",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "ai_business_context",
+            "category": "Operating Expenses",
+            "severity": "critical",
+            "title": "Operating Expenses fluctuate significantly",
+            "description": "Operating Expenses fluctuate from negative $674,010.94 in Dec-2025 and negative $657,948.47 in Jan-2026 to $116,489.25 in Feb-2026, then to $2,487.37 in Mar-2026. This requires investigation to ensure accuracy.",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "trend_anomaly",
+            "assertion": "accuracy",
+            "source": "ai",
+            "amount": null,
+            "evidence": {},
+            "action_required": "Investigate the large fluctuations in Operating Expenses to ensure accuracy and proper classification.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "5cb3c187-8dba-4014-9b5f-4b383fbb373b",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "ai_business_context",
+            "category": "Operating Expenses",
+            "severity": "warning",
+            "title": "General expenses fluctuate significantly",
+            "description": "General expenses fluctuate from negative $696,101.12 in Dec-2025 and negative $670,978.88 in Jan-2026 to $106,240.21 in Feb-2026, then to negative $1,264.88 in Mar-2026. This requires investigation to ensure accuracy.",
+            "section": "profit_loss",
+            "account_name": "General expenses",
+            "finding_type": "trend_anomaly",
+            "assertion": "accuracy",
+            "source": "ai",
+            "amount": null,
+            "evidence": {},
+            "action_required": "Investigate the large fluctuations in General expenses to ensure accuracy and proper classification.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "0833e9d1-905d-4099-818b-6be8fe2e85f7",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "ai_business_context",
+            "category": "Operating Expenses",
+            "severity": "warning",
+            "title": "Bank revaluations fluctuate significantly",
+            "description": "Bank revaluations fluctuate from $981.56 in Dec-2025 and negative $1,975.18 in Jan-2026 to $4,064.66 in Feb-2026, then to $3,752.27 in Mar-2026. This requires investigation to ensure accuracy.",
+            "section": "profit_loss",
+            "account_name": "Bank revaluations",
+            "finding_type": "trend_anomaly",
+            "assertion": "accuracy",
+            "source": "ai",
+            "amount": null,
+            "evidence": {},
+            "action_required": "Investigate the large fluctuations in Bank revaluations to ensure accuracy and proper classification.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "1bf54564-e245-47e4-bb45-1d38fe28f43d",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "ai_business_context",
+            "category": "Net Profit / (Net Loss)",
+            "severity": "warning",
+            "title": "Net Profit / (Net Loss) fluctuates significantly",
+            "description": "Net Profit / (Net Loss) fluctuates from $681,220.94 in Dec-2025 and $663,553.47 in Jan-2026 to negative $112,399.25 in Feb-2026, then to negative $2,391.70 in Mar-2026. This requires investigation to ensure accuracy.",
+            "section": "profit_loss",
+            "account_name": "Net Profit / (Net Loss)",
+            "finding_type": "trend_anomaly",
+            "assertion": "accuracy",
+            "source": "ai",
+            "amount": null,
+            "evidence": {},
+            "action_required": "Investigate the large fluctuations in Net Profit / (Net Loss) to ensure accuracy and proper classification.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "3c171b37-0ca7-4756-826a-8846501b02ae",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "ai_business_context",
+            "category": "Trading Income",
+            "severity": "warning",
+            "title": "Trading Income decreases to 0",
+            "description": "Trading Income decreases to 0 in Mar-2026. This requires investigation to ensure accuracy.",
+            "section": "profit_loss",
+            "account_name": "Trading Income",
+            "finding_type": "trend_anomaly",
+            "assertion": "accuracy",
+            "source": "ai",
+            "amount": null,
+            "evidence": {},
+            "action_required": "Investigate the large fluctuations in Trading Income to ensure accuracy and proper classification.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "90ab84b5-8558-4fba-ad5c-b09277b7da3c",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "ai_business_context",
+            "category": "Cost of Sales",
+            "severity": "warning",
+            "title": "Cost of Sales decreases to 0",
+            "description": "Cost of Sales decreases to 0 in Mar-2026. This requires investigation to ensure accuracy.",
+            "section": "profit_loss",
+            "account_name": "Cost of Sales",
+            "finding_type": "trend_anomaly",
+            "assertion": "accuracy",
+            "source": "ai",
+            "amount": null,
+            "evidence": {},
+            "action_required": "Investigate the large fluctuations in Cost of Sales to ensure accuracy and proper classification.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "d0ecfa4a-de2b-4c75-9dc9-2557e480df61",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "ai_business_context",
+            "category": "Gross Profit",
+            "severity": "warning",
+            "title": "Gross Profit decreases to 0",
+            "description": "Gross Profit decreases to 0 in Mar-2026. This requires investigation to ensure accuracy.",
+            "section": "profit_loss",
+            "account_name": "Gross Profit",
+            "finding_type": "trend_anomaly",
+            "assertion": "accuracy",
+            "source": "ai",
+            "amount": null,
+            "evidence": {},
+            "action_required": "Investigate the large fluctuations in Gross Profit to ensure accuracy and proper classification.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "6e833452-89f2-4f75-9d73-b1670c8057a3",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "ai_anomaly_detection",
+            "category": "bank_revaluations",
+            "severity": "warning",
+            "title": "High volume of bank revaluations at month end.",
+            "description": "There is a high volume of bank revaluation transactions on March 30, 2026. Review the calculations and exchange rates used to ensure accuracy and completeness. The transactions involve multiple currencies (GBP, HKD, USD) and banks (Wise, OCBC, Airwallex).",
+            "section": "balance_sheet",
+            "account_name": "Bank revaluations",
+            "finding_type": "period_end_clustering",
+            "assertion": "accuracy",
+            "source": "ai",
+            "amount": null,
+            "evidence": {},
+            "action_required": "Review the bank revaluation calculations and supporting documentation for accuracy and completeness. Investigate the reason for the high volume of transactions at month-end.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "085c19f4-d680-4bb3-aa1e-c33de2453bd7",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "ai_anomaly_detection",
+            "category": "accounts_payable",
+            "severity": "warning",
+            "title": "Multiple transactions posted to 'Suspense contact'.",
+            "description": "Multiple transactions are posted to 'Suspense contact' in both Accounts Payable and General Expenses. This suggests a lack of proper vendor identification and could indicate control weaknesses. See transactions dated 2026-03-01 for Accounts payable and General expenses.",
+            "section": "profit_loss",
+            "account_name": "Accounts payable",
+            "finding_type": "vendor_concern",
+            "assertion": "existence",
+            "source": "ai",
+            "amount": null,
+            "evidence": {},
+            "action_required": "Investigate the nature of transactions posted to 'Suspense contact' and ensure proper vendor identification and documentation. Implement controls to prevent future use of 'Suspense contact' as a default vendor.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "3c376967-00fd-4be0-b1d5-b00215a95150",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "ai_anomaly_detection",
+            "category": "accounts_payable",
+            "severity": "info",
+            "title": "Weak description for Accounts payable transaction.",
+            "description": "The Accounts payable transaction on 2026-03-01 for S$1,264.88 has a weak description 'general expense'. This lacks sufficient detail for audit purposes.",
+            "section": "profit_loss",
+            "account_name": "Accounts payable",
+            "finding_type": "weak_description",
+            "assertion": "completeness",
+            "source": "ai",
+            "amount": null,
+            "evidence": {},
+            "action_required": "Obtain more detailed information about the nature of the 'general expense' transaction and update the description accordingly.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "d700ea74-ab89-475d-89c5-828932f5b4b7",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "ai_anomaly_detection",
+            "category": "expense",
+            "severity": "info",
+            "title": "Weak description for General expenses transaction.",
+            "description": "The General expenses transaction on 2026-03-01 for S$1,264.88 has a weak description 'general expense'. This lacks sufficient detail for audit purposes.",
+            "section": "profit_loss",
+            "account_name": "General expenses",
+            "finding_type": "weak_description",
+            "assertion": "completeness",
+            "source": "ai",
+            "amount": null,
+            "evidence": {},
+            "action_required": "Obtain more detailed information about the nature of the 'general expense' transaction and update the description accordingly.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "a84d80fc-29b9-4612-b3b6-3151b824d720",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "ai_anomaly_detection",
+            "category": "bank_revaluations",
+            "severity": "warning",
+            "title": "Reversal of Bank Revaluations at year end.",
+            "description": "There are multiple transactions on 2025-12-31 related to 'Reversal of Bank Revaluations for previous period'. This could indicate potential window dressing. Review the calculations and exchange rates used to ensure accuracy and completeness.",
+            "section": "balance_sheet",
+            "account_name": "Bank revaluations",
+            "finding_type": "period_end_clustering",
+            "assertion": "accuracy",
+            "source": "ai",
+            "amount": null,
+            "evidence": {},
+            "action_required": "Review the bank revaluation reversals and supporting documentation for accuracy and completeness. Investigate the reason for the reversals at year-end.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "eb4fcbc1-b987-4356-a370-a059673db598",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "ai_anomaly_detection",
+            "category": "current_asset",
+            "severity": "warning",
+            "title": "Unclear purpose of 'test' transaction.",
+            "description": "A transaction on 2026-03-01 to 'Cash - Airwallex USD' is described as 'test' for USD 1000. The purpose of this transaction is unclear and requires further investigation.",
+            "section": "balance_sheet",
+            "account_name": "Cash - Airwallex USD",
+            "finding_type": "contextual_suspicion",
+            "assertion": "existence",
+            "source": "ai",
+            "amount": null,
+            "evidence": {},
+            "action_required": "Investigate the purpose of the 'test' transaction and ensure it is properly documented and accounted for.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "0e87f27c-7bdc-43ea-8e50-2519992e2d74",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "ai_anomaly_detection",
+            "category": "bank_revaluations",
+            "severity": "warning",
+            "title": "Suspicious contact used for bank revaluations.",
+            "description": "All bank revaluation transactions on 2026-03-30 are posted to 'Suspense contact'. This suggests a lack of proper vendor identification and could indicate control weaknesses.",
+            "section": "balance_sheet",
+            "account_name": "Bank revaluations",
+            "finding_type": "vendor_concern",
+            "assertion": "existence",
+            "source": "ai",
+            "amount": null,
+            "evidence": {},
+            "action_required": "Investigate the nature of transactions posted to 'Suspense contact' and ensure proper vendor identification and documentation. Implement controls to prevent future use of 'Suspense contact' as a default vendor.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "4e2642c1-317d-467a-914a-10350e4247d6",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "ai_financial_health",
+            "category": "Profitability",
+            "severity": "warning",
+            "title": "Revenue decline",
+            "description": "Trading income has declined from $11,910 in Dec 2025 to $0 in Mar 2026. This represents a significant downward trend in revenue generation.",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "profitability_trend",
+            "assertion": "existence",
+            "source": "ai",
+            "amount": null,
+            "evidence": {},
+            "action_required": "Investigate the cause of the revenue decline and implement corrective actions.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "b6d31e57-468c-4cde-a735-1e1276d14ca8",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "ai_financial_health",
+            "category": "Profitability",
+            "severity": "warning",
+            "title": "Gross profit decline",
+            "description": "Gross profit has decreased from $7,185 in Dec 2025 to $0 in Mar 2026, mirroring the revenue decline. This suggests potential issues with sales or cost of goods sold.",
+            "section": "profit_loss",
+            "account_name": null,
+            "finding_type": "margin_erosion",
+            "assertion": "existence",
+            "source": "ai",
+            "amount": null,
+            "evidence": {},
+            "action_required": "Analyze cost of sales and pricing strategies to identify the cause of the gross profit decline.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "485c080e-6bd2-4ac4-addb-33f85744ccc8",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "ai_financial_health",
+            "category": "Liquidity",
+            "severity": "warning",
+            "title": "High accounts payable",
+            "description": "Accounts payable remains consistently high at approximately $15.16 million across all periods. This could indicate potential liquidity issues if not managed effectively.",
+            "section": "balance_sheet",
+            "account_name": null,
+            "finding_type": "liquidity_concern",
+            "assertion": "existence",
+            "source": "ai",
+            "amount": null,
+            "evidence": {},
+            "action_required": "Review accounts payable aging and payment terms to ensure timely payments and avoid potential cash flow problems.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "c30dcc29-07aa-45d7-aa5b-af5828d145b1",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "ai_financial_health",
+            "category": "Solvency",
+            "severity": "warning",
+            "title": "Concentration of assets in accounts receivable",
+            "description": "Accounts receivable constitutes a very large portion of total assets, remaining constant at approximately $30.07 million. This concentration exposes the company to significant credit risk.",
+            "section": "balance_sheet",
+            "account_name": null,
+            "finding_type": "bs_composition",
+            "assertion": "existence",
+            "source": "ai",
+            "amount": null,
+            "evidence": {},
+            "action_required": "Assess the collectability of accounts receivable and implement measures to reduce credit risk exposure.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "62605d51-d50b-425c-8978-9141732a4b36",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "ai_financial_health",
+            "category": "Solvency",
+            "severity": "info",
+            "title": "Consistent Balance Sheet Equation",
+            "description": "The balance sheet equation (Assets = Liabilities + Equity) is consistent across all periods, indicating good accounting practices.",
+            "section": "balance_sheet",
+            "account_name": null,
+            "finding_type": "positive_indicator",
+            "assertion": "existence",
+            "source": "ai",
+            "amount": null,
+            "evidence": {},
+            "action_required": "No action required \u2014 noted for review context.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "6a3e069f-ef79-4cbf-a431-0513413dbb64",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "ai_financial_health",
+            "category": "Equity",
+            "severity": "info",
+            "title": "Healthy Equity Position",
+            "description": "The company maintains a positive equity position of approximately $16.26 million across all periods.",
+            "section": "balance_sheet",
+            "account_name": null,
+            "finding_type": "positive_indicator",
+            "assertion": "existence",
+            "source": "ai",
+            "amount": null,
+            "evidence": {},
+            "action_required": "No action required \u2014 noted for review context.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "061f0d1e-6bb7-4c8d-9a2f-7182f45bbee7",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "ai_profit_loss_categorization",
+            "category": "asset",
+            "severity": "warning",
+            "title": "Possible miscategorization: Cash - Airwallex USD",
+            "description": "The transaction description 'test' with contact 'Suspense contact' suggests this might be a temporary holding account. It is unusual to have a 'Suspense contact' associated with a cash account. Review the nature of this transaction and reclassify to the correct revenue, expense, or balance sheet account.",
+            "section": "profit_loss",
+            "account_name": "Cash - Airwallex USD",
+            "finding_type": "wrong_account_categorization",
+            "assertion": "accuracy",
+            "source": "ai",
+            "amount": 1264.88,
+            "evidence": {
+                "acDocumentIds": [
+                    48374841
+                ]
+            },
+            "action_required": "Review and reclassify transactions to the correct account if confirmed.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "ff14be09-bb3d-4345-aed7-d06be7873eca",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "ai_profit_loss_categorization",
+            "category": "expense",
+            "severity": "warning",
+            "title": "Possible miscategorization: General expenses",
+            "description": "The transaction description is 'general expense'. While the account 'General expenses' exists, it is a very broad category. Without more information, it's difficult to pinpoint the exact nature of the expense. However, depending on the specifics, a more descriptive account might be more appropriate. For example, if the expense relates to administrative tasks, 'Administrative fees' might be a better fit. If it's a government-related expense, 'Government fees' could be more accurate. If it relates to office supplies, 'Office expenses' might be suitable. Review the transaction details to determine a more specific and accurate account.",
+            "section": "profit_loss",
+            "account_name": "General expenses",
+            "finding_type": "wrong_account_categorization",
+            "assertion": "accuracy",
+            "source": "ai",
+            "amount": 1264.88,
+            "evidence": {
+                "acDocumentIds": [
+                    48436773
+                ]
+            },
+            "action_required": "Review and reclassify transactions to a more specific expense account if confirmed.",
+            "accountant_note": null,
+            "status": "open",
+            "resolved_by": null,
+            "resolved_at": null,
+            "metadata": null,
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T09:11:20.34074"
+        },
+        {
+            "id": "1c356f05-6902-47c1-b9e4-c4cd27a6639a",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "aging",
+            "category": "current_assets",
+            "severity": "critical",
+            "title": "Receivable overdue >121 days: Suspense contact",
+            "description": "Suspense contact has 23 invoices totaling S$ 30,067,830.00 overdue 120+ days.",
+            "section": "balance_sheet",
+            "account_name": "Accounts Receivable",
+            "finding_type": "ar_aging_overdue",
+            "assertion": "accuracy",
+            "source": "code",
+            "amount": 30067830,
+            "evidence": {
+                "days": 121,
+                "type": "receivable",
+                "contact": "Suspense contact",
+                "agingBucket": "> 121 days",
+                "invoiceCount": 23
+            },
+            "action_required": "Review collection efforts. Consider provision for doubtful debts.",
+            "accountant_note": null,
+            "status": "sent_to_bookkeeper",
+            "resolved_by": "5682",
+            "resolved_at": "2026-04-13T13:52:51.251",
+            "metadata": {
+                "sentToBookkeeperAt": "2026-04-13T13:52:51.251Z"
+            },
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T13:52:51.252"
+        },
+        {
+            "id": "87814272-c292-4410-bb6b-f25dfe8fe9e8",
+            "session_id": "c1a0354a-030a-4865-a41f-c41b2bde47f3",
+            "check_id": "ai_business_context",
+            "category": "Operating Expenses",
+            "severity": "warning",
+            "title": "Rental of office premise decreases to 0",
+            "description": "Rental of office premise decreases to 0 in Mar-2026. This requires investigation to ensure accuracy.",
+            "section": "profit_loss",
+            "account_name": "Rental of office premise",
+            "finding_type": "trend_anomaly",
+            "assertion": "accuracy",
+            "source": "ai",
+            "amount": null,
+            "evidence": {},
+            "action_required": "Investigate the large fluctuations in Rental of office premise to ensure accuracy and proper classification.",
+            "accountant_note": null,
+            "status": "sent_to_bookkeeper",
+            "resolved_by": "5682",
+            "resolved_at": "2026-04-13T13:53:19.634",
+            "metadata": {
+                "sentToBookkeeperAt": "2026-04-13T13:53:19.633Z"
+            },
+            "created_at": "2026-04-13T09:11:20.34074",
+            "updated_at": "2026-04-13T13:53:19.635"
+        }
+    ]
+}
